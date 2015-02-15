@@ -1,0 +1,6 @@
+# TODO: remove once wx-phoenix is in pypi (or at least https-hosted)
+-f http://wxpython.org/Phoenix/snapshot-builds
+
+openslides>=2.0a1-dev
+wxPython-Phoenix>=0.0.dev0
+psutil>=2.2.0
