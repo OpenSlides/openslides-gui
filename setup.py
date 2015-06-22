@@ -1,17 +1,28 @@
 from setuptools import setup, find_packages
 
+with open('README.rst') as readme:
+    long_description = readme.read()
+
 setup(
     name="openslides-gui",
-    version="1.0.0dev1",
+    version="1.0-dev",
     description="GUI frontend for openslides",
-    long_description="", # TODO
-    url='http://openslides.org',
-    author='OpenSlides-Team, see AUTHORS',
+    long_description=long_description,
+    url='https://github.com/OpenSlides/openslides-gui',
+    author='OpenSlides-Team, see README',
     author_email='support@openslides.org',
     license='MIT',
     keywords='OpenSlides',
     classifiers=[
-        # TODO: fill those
+        # TODO
+        'Development Status :: 4 - Beta',
+        # 'Development Status :: 5 - Production/Stable',
+        'Environment :: Plugins',
+        'Environment :: Web Environment',
+        'Framework :: Django',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3',
     ],
     packages=find_packages(),
     install_requires=[
