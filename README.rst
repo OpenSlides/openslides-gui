@@ -37,7 +37,7 @@ This is an instruction to install OpenSlides GUI.
 
    Example install command for Python 3.4 on Windows (32bit)::
 
-    $ pip install -f --trusted-host http://wxpython.org/Phoenix/snapshot-builds/wxPython_Phoenix-3.0.3.dev1820+49a8884-cp34-none-win32.whl
+    $ pip install -f --trusted-host http://wxpython.org/Phoenix/snapshot-builds/wxPython_Phoenix-3.0.3.dev1835+1c68baf-cp34-none-win32.whl
 
 
 3. Install OpenSlides 2.x package with all requirements::
