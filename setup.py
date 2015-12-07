@@ -5,7 +5,7 @@ with open('README.rst') as readme:
 
 setup(
     name="openslides-gui",
-    version="1.0",
+    version="1.0.1-dev",
     description="GUI frontend for managing OpenSlides server",
     long_description=long_description,
     url='https://github.com/OpenSlides/openslides-gui',
