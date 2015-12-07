@@ -32,7 +32,8 @@ This is an instruction to install OpenSlides GUI.
 
 2. Install wxPython_Phoenix
 
-   Install wheel (whl) file from the official (unfortunately untrusted http) snapshot url.
+   Install wheel (whl) file from the official (unfortunately untrusted http)
+   `snapshot url http://wxpython.org/Phoenix/snapshot-builds`_.
    For easier installation we have to wait once wxPython-Phoenix is released on pypi.python.org.
 
    Example install command for Python 3.4 on Windows (32bit)::
@@ -42,13 +43,12 @@ This is an instruction to install OpenSlides GUI.
 
 3. Install OpenSlides 2.x package with all requirements::
 
-   $ pip install openslides-2.x.tar.gz
+   $ pip install openslides-2.x
 
 
-4. Create sdist package from openslides-gui and install it::
+4. Install openslides-gui::
 
-   $ python setup.py sdist
-   $ pip install openslides-gui-1.x.tar.gz
+   $ pip install openslides-gui
 
 
 5. Run the OpenSlides GUI::
@@ -73,7 +73,7 @@ Authors
 Changelog
 =========
 
-Version 1.0 (unreleased)
+Version 1.0 (2015-12-07)
 ------------------------
 * First release of openslides-gui for OpenSlides 2.x.
   It's moved from old OpenSlides 1.x repository into an own openslides-gui package.
