@@ -33,7 +33,7 @@ This is an instruction to install OpenSlides GUI.
 2. Install wxPython_Phoenix
 
    Install wheel (whl) file from the official (unfortunately untrusted http)
-   `snapshot url http://wxpython.org/Phoenix/snapshot-builds`_.
+   `snapshot url <http://wxpython.org/Phoenix/snapshot-builds>`_.
    For easier installation we have to wait once wxPython-Phoenix is released on pypi.python.org.
 
    Example install command for Python 3.4 on Windows (32bit)::
