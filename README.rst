@@ -12,7 +12,7 @@ Used with `OpenSlides Portable <https://github.com/OpenSlides/openslides-portabl
 Requirements
 ============
 
-- Python 3.3+
+- Python 3.4+
 - OpenSlides 2.x
 - wxPython-Phoenix
 - psutil
@@ -25,7 +25,7 @@ Install
 
 This is an instruction to install OpenSlides GUI.
 
-1. Install Python 3.3+ and Setuptools
+1. Install Python 3.4+ and Setuptools
 
    Follow the instructions in the README of OpenSlides.
 
