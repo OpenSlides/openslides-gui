@@ -73,6 +73,11 @@ Authors
 Changelog
 =========
 
+Version 1.0.1 (2016-02-03)
+--------------------------
+* Updated README to Python 3.4.
+* Updated Credits to 2016.
+
 Version 1.0 (2015-12-07)
 ------------------------
 * First release of openslides-gui for OpenSlides 2.x.
