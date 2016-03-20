@@ -419,7 +419,6 @@ class MainWindow(wx.Frame):
         server_box.Add(self.bt_server, flag=wx.EXPAND)
 
         self.host = "0.0.0.0"
-        # XXX: get_port was apprently remoed by openslides:35024764cf38cb19395bd773d29f5b8d463f3024
         self.port = "8000"
 
         # "action" buttons
@@ -646,7 +645,7 @@ class MainWindow(wx.Frame):
             self.cmd_run_ctrl.cancel_command()
             return
 
-        args = ["{0}:{1}".format(self._host, self._port)]
+        args = ["--host", self._host, "--port", self._port]
 
         if not self.cb_start_browser.GetValue():
             args.append("--no-browser")
