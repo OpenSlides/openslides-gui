@@ -5,7 +5,7 @@ with open('README.rst') as readme:
 
 setup(
     name="openslides-gui",
-    version="1.0.2-dev",
+    version="1.1",
     description="GUI frontend for managing OpenSlides server",
     long_description=long_description,
     url='https://github.com/OpenSlides/openslides-gui',
@@ -20,7 +20,8 @@ setup(
         'Framework :: Django',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
     packages=find_packages(),
     install_requires=[
