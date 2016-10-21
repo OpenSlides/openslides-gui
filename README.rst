@@ -12,7 +12,7 @@ Used with `OpenSlides Portable <https://github.com/OpenSlides/openslides-portabl
 Requirements
 ============
 
-- Python 3.4+
+- Python 3.5+
 - OpenSlides 2.x
 - wxPython-Phoenix
 - psutil
@@ -25,20 +25,18 @@ Install
 
 This is an instruction to install OpenSlides GUI.
 
-1. Install Python 3.4+ and Setuptools
+1. Install Python 3.5+ and Setuptools
 
    Follow the instructions in the README of OpenSlides.
 
 
-2. Install wxPython_Phoenix
+2. Install requirements::
 
-   Install wheel (whl) file from the official (unfortunately untrusted http)
-   `snapshot url <http://wxpython.org/Phoenix/snapshot-builds>`_.
-   For easier installation we have to wait once wxPython-Phoenix is released on pypi.python.org.
+   $ pip install -r requirements.txt
 
-   Example install command for Python 3.4 on Windows (32bit)::
 
-    $ pip install -f --trusted-host http://wxpython.org/Phoenix/snapshot-builds/wxPython_Phoenix-3.0.3.dev1964+f780b21-cp34-cp34m-win32.whl
+   For installing of wxPython-Phoennix the official `snapshot url <http://wxpython.org/Phoenix/snapshot-builds>`_
+   is used because it's not yet released on pypi.python.org.
 
 
 3. Install OpenSlides 2.x package with all requirements::
