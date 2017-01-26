@@ -71,6 +71,11 @@ Authors
 Changelog
 =========
 
+Version 1.1.1 (2017-01-26)
+-------------------------
+* Updated README to Python 3.5.
+* Updated Credits to 2016.
+
 Version 1.1 (2016-03-21)
 ------------------------
 * Added port/host arguments for openslides start command.

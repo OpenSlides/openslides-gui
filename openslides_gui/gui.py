@@ -633,7 +633,7 @@ class MainWindow(wx.Frame):
             "assembly system.\n"
             "OpenSlides is free software; licensed under the MIT license."
         ).replace(u" ", u"\u00a0"))
-        info.SetCopyright(_(u"\u00a9 2011-2016 by OpenSlides team"))
+        info.SetCopyright(_(u"\u00a9 2011-2017 by OpenSlides team"))
         info.SetWebSite("http://www.openslides.org/", "www.openslides.org")
 
         # XXX: at least on wxgtk this has no effect
