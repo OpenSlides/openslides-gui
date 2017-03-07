@@ -177,6 +177,13 @@ class SettingsDialog(wx.Dialog):
 
         row += 1
 
+        self.cb_use_geiss = wx.CheckBox(
+        self, label=_("&Use Geiss and Redis (experimental, 64bit only)"))
+        self.cb_use_geiss.SetValue(False)
+        grid.Add(self.cb_use_geiss, pos=(row, 0), span=(1, 3))
+
+        row += 1
+
         sizer = self.CreateButtonSizer(wx.OK | wx.CANCEL)
         if not sizer is None:
             grid.Add(0, 0, pos=(row, 0), span=(1, 2))
@@ -205,6 +212,14 @@ class SettingsDialog(wx.Dialog):
     @port.setter
     def port(self, port):
         self.tc_port.SetValue(port)
+
+    @property
+    def use_geiss(self):
+        return self.cb_use_geiss.GetValue()
+
+    @use_geiss.setter
+    def use_geiss(self, use_geiss):
+        self.cb_use_geiss.SetValue(use_geiss)
 
 
 class BackupSettingsDialog(wx.Dialog):
@@ -394,6 +409,7 @@ class MainWindow(wx.Frame):
 
         self._host = None
         self._port = None
+        self.use_geiss = False
         hbox = wx.BoxSizer(wx.HORIZONTAL)
         server_box.Add(hbox, flag=wx.EXPAND)
         self.lb_host = wx.StaticText(panel)
@@ -549,6 +565,7 @@ class MainWindow(wx.Frame):
         server_settings = settings.get("server_settings", {})
         setattr_unless_none("host", server_settings.get("host"))
         setattr_unless_none("port", server_settings.get("port"))
+        setattr_unless_none("use_geiss", server_settings.get("use_geiss"))
 
     def save_gui_settings(self):
         if self.last_backup is None:
@@ -566,6 +583,7 @@ class MainWindow(wx.Frame):
             "server_settings": {
                 "host": self.host,
                 "port": self.port,
+                "use_geiss": self.use_geiss,
             },
         }
 
@@ -650,6 +668,13 @@ class MainWindow(wx.Frame):
         if not self.cb_start_browser.GetValue():
             args.append("--no-browser")
 
+        if self.use_geiss:
+            args.append("--use-geiss")
+            # run redis-server
+            self.cmd_run_ctrl.append_message(_("Starting redis server..."))
+            redis_command = os.path.join('bin', 'redis-server')
+            subprocess.Popen([redis_command])
+
         self.server_running = True
         self.cmd_run_ctrl.run_command("start", *args)
 
@@ -662,10 +687,12 @@ class MainWindow(wx.Frame):
         dlg = SettingsDialog(self)
         dlg.host = self._host
         dlg.port = self._port
+        dlg.use_geiss = self.use_geiss
 
         if dlg.ShowModal() == wx.ID_OK:
             self.host = dlg.host
             self.port = dlg.port
+            self.use_geiss = dlg.use_geiss
 
     def on_backup_clicked(self, evt):
         dlg = BackupSettingsDialog(self)
