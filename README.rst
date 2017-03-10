@@ -71,6 +71,12 @@ Authors
 Changelog
 =========
 
+Version 1.1.2 (unreleased)
+-------------------------
+* Don't kill browser after stopping server.
+  (Removed psutil as requirements)
+* Added option to use Geiss and Redis server.
+
 Version 1.1.1 (2017-01-26)
 -------------------------
 * Updated README to Python 3.5.

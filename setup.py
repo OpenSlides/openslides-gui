@@ -27,7 +27,6 @@ setup(
     install_requires=[
         "openslides",
         "wxPython-Phoenix",
-        "psutil",
     ],
     package_data={
         "openslides_gui": [
