@@ -3,4 +3,3 @@
 
 openslides>=2.0
 wxPython-Phoenix>=3.0.3.dev2562+33fadd8
-psutil>=4.3.0

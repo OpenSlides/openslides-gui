@@ -6,11 +6,10 @@ import json
 import locale
 import os
 import queue
+import signal
 import subprocess
 import sys
 import threading
-
-import psutil
 
 import wx
 import wx.adv
@@ -106,13 +105,8 @@ class RunCommandControl(wx.Panel):
             return
 
         self.te_output.AppendText(_("Stopping server..."))
-        # hard-kill the spawned process tree
-        # TODO: offer the server the chance for a clean shutdown
-        proc = psutil.Process(self.child_process.pid)
-        kill_procs = [proc]
-        kill_procs.extend(proc.children(recursive=True))
-        for p in kill_procs:
-            p.kill()
+        # kill the main process (without killing browser)
+        os.kill(self.child_process.pid, signal.SIGINT)
 
     def on_update_timer(self, evt):
         is_alive = self.is_alive()
