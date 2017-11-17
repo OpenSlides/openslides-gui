@@ -62,7 +62,7 @@ Authors
 Changelog
 =========
 
-Version 1.1.3 (2017-03-29)
+Version 1.1.3 (2017-11-17)
 --------------------------
 * Install wxpython from pypi.
 
