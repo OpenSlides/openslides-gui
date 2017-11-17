@@ -3,6 +3,9 @@ from setuptools import setup, find_packages
 with open('README.rst') as readme:
     long_description = readme.read()
 
+with open('requirements.txt') as requirements:
+    install_requires = requirements.readlines()
+
 setup(
     name="openslides-gui",
     version="1.1.3-dev",
@@ -24,10 +27,7 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     packages=find_packages(),
-    install_requires=[
-        "openslides",
-        "wxPython-Phoenix",
-    ],
+    install_requires=install_requires,
     package_data={
         "openslides_gui": [
             "data/openslides.ico",
