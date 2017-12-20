@@ -35,21 +35,12 @@ This is an instruction to install OpenSlides GUI.
    $ pip install -r requirements.txt
 
 
-   For installing of wxPython-Phoennix the official `snapshot url <http://wxpython.org/Phoenix/snapshot-builds>`_
-   is used because it's not yet released on pypi.python.org.
-
-
-3. Install OpenSlides 2.x package with all requirements::
-
-   $ pip install openslides-2.x
-
-
-4. Install openslides-gui::
+3. Install openslides-gui::
 
    $ pip install openslides-gui
 
 
-5. Run the OpenSlides GUI::
+4. Run the OpenSlides GUI::
 
    $ openslides-gui
 
@@ -70,6 +61,10 @@ Authors
 
 Changelog
 =========
+
+Version 1.1.3 (2017-11-17)
+--------------------------
+* Install wxpython from pypi.
 
 Version 1.1.2 (2017-03-29)
 --------------------------

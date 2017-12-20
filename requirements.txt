@@ -1,5 +1,2 @@
-# TODO: remove once wx-phoenix is in pypi
--f https://wxpython.org/Phoenix/snapshot-builds
-
-openslides>=2.0
-wxPython-Phoenix>=3.0.3.dev2562+33fadd8
+openslides
+wxPython>=4.0.0b2
