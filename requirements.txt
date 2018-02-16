@@ -1,2 +1,2 @@
 openslides
-wxPython>=4.0.0b2
+wxPython>=4.0.1

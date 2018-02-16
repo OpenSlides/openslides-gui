@@ -18,7 +18,7 @@ import openslides
 
 from openslides.utils.main import (
     detect_openslides_type,
-    get_default_user_data_path,
+    get_default_user_data_dir,
     PortableDirNotWritable,
 )
 
@@ -479,7 +479,7 @@ class MainWindow(wx.Frame):
         # type in.
         openslides_type = detect_openslides_type()
         try:
-            default_user_data_path = get_default_user_data_path(openslides_type)
+            default_user_data_path = get_default_user_data_dir(openslides_type)
         except PortableDirNotWritable:
             wx.MessageBox(
                 _("The portable directory is not writable. Please copy the "
@@ -645,8 +645,8 @@ class MainWindow(wx.Frame):
             "assembly system.\n"
             "OpenSlides is free software; licensed under the MIT license."
         ).replace(u" ", u"\u00a0"))
-        info.SetCopyright(_(u"\u00a9 2011-2017 by OpenSlides team"))
-        info.SetWebSite("http://www.openslides.org/", "www.openslides.org")
+        info.SetCopyright(_(u"\u00a9 2011-2018 by OpenSlides team"))
+        info.SetWebSite("https://www.openslides.org/", "www.openslides.org")
 
         # XXX: at least on wxgtk this has no effect
         info.SetIcon(self.GetIcon())
