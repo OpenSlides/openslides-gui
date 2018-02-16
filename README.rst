@@ -13,9 +13,8 @@ Requirements
 ============
 
 - Python 3.5+
-- OpenSlides 2.x
-- wxPython-Phoenix
-- psutil
+- OpenSlides 2.2
+- wxPython 4.x (Phoenix)
 
 See requirements.txt
 
@@ -61,6 +60,12 @@ Authors
 
 Changelog
 =========
+
+Version 1.1.4 (2018-02-16)
+--------------------------
+* Use get_default_user_data_dir instead of get_default_user_data_path
+* Updated wxphoenix.
+* Updated credits.
 
 Version 1.1.3 (2017-11-17)
 --------------------------
