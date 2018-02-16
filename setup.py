@@ -8,7 +8,7 @@ with open('requirements.txt') as requirements:
 
 setup(
     name="openslides-gui",
-    version="1.1.4",
+    version="1.1.5-dev",
     description="GUI frontend for managing OpenSlides server",
     long_description=long_description,
     url='https://github.com/OpenSlides/openslides-gui',
