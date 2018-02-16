@@ -18,7 +18,7 @@ import openslides
 
 from openslides.utils.main import (
     detect_openslides_type,
-    get_default_user_data_path,
+    get_default_user_data_dir,
     PortableDirNotWritable,
 )
 
@@ -479,7 +479,7 @@ class MainWindow(wx.Frame):
         # type in.
         openslides_type = detect_openslides_type()
         try:
-            default_user_data_path = get_default_user_data_path(openslides_type)
+            default_user_data_path = get_default_user_data_dir(openslides_type)
         except PortableDirNotWritable:
             wx.MessageBox(
                 _("The portable directory is not writable. Please copy the "
